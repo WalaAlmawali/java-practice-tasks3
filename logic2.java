@@ -14,9 +14,12 @@ public class logic2 {
         System.out.println(ex3.lessBy10(11,1,7));*/
 
         // task 4
-        logic2 ex4 = new logic2();
-        System.out.println(ex4.redTicket(0,0,0));
+       /* logic2 ex4 = new logic2();
+        System.out.println(ex4.redTicket(0,0,0));*/
 
+        // task 5
+        logic2 ex5 = new logic2();
+        System.out.println(ex5.shareDigit(12,44));
     }
 
     public String fizzString(String str){
@@ -60,4 +63,16 @@ public class logic2 {
         }
         return 0;
     }
+    public boolean shareDigit(int a, int b){
+        int aLeft = a / 10;
+        int aRight = a % 10;
+        int bLeft =b / 10;
+        int bRight = b % 10;
+
+        if((aLeft == bLeft) || (aLeft == bRight) || (aRight == bLeft) || (aRight == bRight)){
+            return true;
+        }
+        return false;
+    }
+
 }
