@@ -13,8 +13,12 @@ public class logic1 {
         System.out.println(ex3.love6(1,5));*/
 
         // task 4
-        logic1 ex4= new logic1();
-        System.out.println(ex4.more20(22));
+       /* logic1 ex4= new logic1();
+        System.out.println(ex4.more20(22));*/
+
+        // task 5
+        logic1 ex5= new logic1();
+        System.out.println(ex5.nearTen(12));
     }
 public boolean cigarParty(int cigars, boolean isWeekend){
 
@@ -64,6 +68,14 @@ public boolean cigarParty(int cigars, boolean isWeekend){
         if(n % 20 == 1 || n % 20 ==2){
             return true;
         }else{
+            return false;
+        }
+    }
+
+    public boolean nearTen(int num){
+        if(num % 10 == 0 ||num % 10 == 1 || num % 10 == 2 || num % 10 == 8 || num % 10 == 9){
+            return true;
+        }else {
             return false;
         }
     }
