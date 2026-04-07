@@ -30,8 +30,12 @@ public class logic2 {
         System.out.println(ex7.alarmClock(0,false));*/
 
         // task 8
-        logic2 ex8= new logic2();
-        System.out.println(ex8.specialEleven(24));
+        /*logic2 ex8= new logic2();
+        System.out.println(ex8.specialEleven(24));*/
+
+        // task 9
+        logic2 ex9= new logic2();
+        System.out.println(ex9.less20(20));
 
     }
 
@@ -119,5 +123,10 @@ public class logic2 {
         }
         return false;
     }
-
+    public boolean less20(int n){
+        if(n % 20 == 18 || n % 20 == 19){
+            return true;
+        }
+        return false;
+    }
 }
