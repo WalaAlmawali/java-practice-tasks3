@@ -9,8 +9,12 @@ public class logic1 {
         System.out.println(ex2.caughtSpeeding(86,true));
 */
         // task 3
-        logic1 ex3= new logic1();
-        System.out.println(ex3.love6(1,5));
+        /*logic1 ex3= new logic1();
+        System.out.println(ex3.love6(1,5));*/
+
+        // task 4
+        logic1 ex4= new logic1();
+        System.out.println(ex4.more20(22));
     }
 public boolean cigarParty(int cigars, boolean isWeekend){
 
@@ -52,6 +56,14 @@ public boolean cigarParty(int cigars, boolean isWeekend){
         if(a == 6 || b == 6 ||a + b == 6 || Math.abs(a - b) == 6 ){
             return true;
         }else {
+            return false;
+        }
+    }
+
+    public boolean more20(int n){
+        if(n % 20 == 1 || n % 20 ==2){
+            return true;
+        }else{
             return false;
         }
     }
