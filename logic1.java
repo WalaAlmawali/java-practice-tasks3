@@ -25,8 +25,12 @@ public class logic1 {
         System.out.println(ex6.teaParty(6,8));*/
 
         // task 7
-        logic1 ex7= new logic1();
-        System.out.println(ex7.twoAsOne(3,2,2));
+       /* logic1 ex7= new logic1();
+        System.out.println(ex7.twoAsOne(3,2,2));*/
+
+        // task 8
+        logic1 ex8= new logic1();
+        System.out.println(ex8.lastDigit(23,19,3));
 
     }
 public boolean cigarParty(int cigars, boolean isWeekend){
@@ -105,6 +109,16 @@ public boolean cigarParty(int cigars, boolean isWeekend){
             return false;
         }
     }
+    public boolean lastDigit(int a, int b, int c){
+        int lastA = a % 10;
+        int lastB = b % 10;
+        int lastC = c % 10;
 
+        if(lastA == lastB || lastA==lastC || lastC==lastB ){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 }
