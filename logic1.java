@@ -45,8 +45,15 @@ public class logic1 {
         System.out.println(ex11.dateFashion(5,5));*/
 
         // task 12
-        logic1 ex12= new logic1();
-        System.out.println(ex12.sortaSum(10,11));
+        /*logic1 ex12= new logic1();
+        System.out.println(ex12.sortaSum(10,11));*/
+
+        // task 13
+        logic1 ex13= new logic1();
+        System.out.println(ex13.in1To10(5,false));
+
+
+
     }
 public boolean cigarParty(int cigars, boolean isWeekend){
 
@@ -174,5 +181,16 @@ public boolean cigarParty(int cigars, boolean isWeekend){
         }else {
             return sum;}
     }
-
+    public boolean in1To10(int n, boolean outsideMode){
+        if(outsideMode == false){
+            if( n >= 1 && n<= 10){
+                return true;
+            }
+        } else if (outsideMode == true) {
+            if(n>=10 || n <= 1){
+                return true;
+            }
+        }
+       return false;
+    }
 }
