@@ -33,9 +33,12 @@ public class logic1 {
         System.out.println(ex8.lastDigit(23,19,3));*/
 
         // task 9
-        logic1 ex9= new logic1();
-        System.out.println(ex9.maxMod5(3,2));
+        /*logic1 ex9= new logic1();
+        System.out.println(ex9.maxMod5(3,2));*/
 
+        // task 10
+        logic1 ex10= new logic1();
+        System.out.println(ex10.blueTicket(6,1,4));
     }
 public boolean cigarParty(int cigars, boolean isWeekend){
 
@@ -132,6 +135,16 @@ public boolean cigarParty(int cigars, boolean isWeekend){
             return Math.min(a,b);
         }else {
             return Math.max(a,b);
+        }
+    }
+
+    public int blueTicket(int a, int b, int c){
+        if(a+b == 10 || b+c == 10 || a+c == 10){
+            return 10;
+        } else if (a+b == b+c+10 ||a+b == a+c+10) {
+            return 5;
+        }else{
+            return 0;
         }
     }
 
