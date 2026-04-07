@@ -38,9 +38,12 @@ public class logic2 {
         System.out.println(ex9.less20(20));*/
 
         // task 10
-        logic2 ex10= new logic2();
-        System.out.println(ex10.answerCell(true, false, false));
+        /*logic2 ex10= new logic2();
+        System.out.println(ex10.answerCell(true, false, false));*/
 
+        // task 11
+        logic2 ex11= new logic2();
+        System.out.println(ex11.fizzString2(3));
     }
 
     public String fizzString(String str){
@@ -146,5 +149,16 @@ public class logic2 {
             return true;
         }
         return false;
+    }
+
+    public String fizzString2(int n){
+        if( n % 3 == 0 && n % 5 == 0){
+            return "FizzBuzz!";
+        } else if (n % 3 == 0) {
+            return "Fizz!";
+        } else if ( n % 5 == 0) {
+            return "Buzz!";
+        }
+        return n + "!";
     }
 }
