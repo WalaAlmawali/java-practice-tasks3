@@ -22,8 +22,12 @@ public class logic2 {
         System.out.println(ex5.shareDigit(12,44));*/
 
         // task 6
-        logic2 ex6 = new logic2();
-        System.out.println(ex6.squirrelPlay(95,true));
+//        logic2 ex6 = new logic2();
+//        System.out.println(ex6.squirrelPlay(95,true));
+
+        // task 7
+        logic2 ex7 = new logic2();
+        System.out.println(ex7.alarmClock(0,false));
 
 
     }
@@ -93,5 +97,17 @@ public class logic2 {
         }
         return false;
     }
-
+    public String alarmClock(int day, boolean vacation){
+        if(day == 0 || day == 6){
+            if(vacation == false){
+                return "10:00";
+            }else {
+                return "off";
+            }
+        } else if (vacation == false) {
+            return "7:00";
+        }else{
+            return "10:00";
+        }
+    }
 }
