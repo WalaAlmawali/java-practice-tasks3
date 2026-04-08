@@ -44,8 +44,11 @@ public class Array2 {
         System.out.println(java.util.Arrays.toString(ex.post4(a)));*/
 
         // task 11
-        int [] a = {1,2,10,6,10,8};
-        System.out.println(java.util.Arrays.toString(ex.withoutTen(a)));
+       /* int [] a = {1,2,10,6,10,8};
+        System.out.println(java.util.Arrays.toString(ex.withoutTen(a)));*/
+
+        // task 12
+        System.out.println(java.util.Arrays.toString(ex.fizzBuzz(2,5)));
 
     }
     public int  countEvens(int [] arr){
@@ -166,10 +169,28 @@ public int [] post4(int [] arr){
 public int [] withoutTen(int [] arr){
         int [] result= new int[arr.length];
         int index = 0;
+
         for(int i = 0 ; i<arr.length;i++){
             if(arr[i] != 10){
                 result[index] = arr[i];
                 index++;
+            }
+        }
+        return result;
+}
+
+public String [] fizzBuzz(int start , int end){
+        String[] result = new String[end - start];
+
+        for(int i = start; i< end;i++){
+            if(i % 3 ==0 && i % 5 ==0){
+                result[i-start] ="FizzBuzz";
+            } else if (i % 3 == 0) {
+                result[i - start]="Fizz";
+            } else if (i % 5 == 0) {
+                result[i - start]="Buzz";
+            }else {
+                result[i - start] = String.valueOf(i);
             }
         }
         return result;
