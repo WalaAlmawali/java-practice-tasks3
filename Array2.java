@@ -32,8 +32,13 @@ public class Array2 {
         System.out.println(ex.modThree(a));*/
 
         // task 8
-        int [] c = {4, 2, 3,4, 2};
-        System.out.println(ex.sameEnds(2,c));
+        /*int [] c = {4, 2, 3,4, 2};
+        System.out.println(ex.sameEnds(2,c));*/
+
+        // task 9
+        int [] a = {1,2,3,4};
+        System.out.println(java.util.Arrays.toString(ex.shiftLeft(a)));
+
 
     }
     public int  countEvens(int [] arr){
@@ -126,6 +131,15 @@ public boolean sameEnds(int n , int [] arr){
             }
         }
         return true;
+}
+
+public int [] shiftLeft(int [] arr){
+        int temp = arr[0];
+        for(int i = 0 ; i<arr.length -1 ; i++){
+            arr[i]=arr[i+1];
+        }
+        arr[arr.length-1]=temp;
+        return arr;
 }
 
 }
