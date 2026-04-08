@@ -51,8 +51,13 @@ public class Array2 {
         //System.out.println(java.util.Arrays.toString(ex.fizzBuzz(2,5)));
 
         // task 13
-        int [] a = {1,2,10,6};
-        System.out.println(ex.bigDiff(a));
+       /* int [] a = {1,2,10,6};
+        System.out.println(ex.bigDiff(a));*/
+
+        // task 14
+        int [] a = {1,5,10,7,3};
+        System.out.println(ex.sum67(a));
+
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -212,5 +217,25 @@ public int bigDiff(int [] arr){
 
         }
         return max - min;
+}
+public int sum67(int [] arr){
+        int sum = 0;
+        boolean ignore = false;
+
+        for (int i =0 ; i<arr.length;i++){
+            if(arr[i] == 6){
+                ignore = true;
+            }
+
+            if(!ignore){
+                sum += arr[i];
+            }
+
+            if (arr[i] == 7 && ignore){
+                ignore = false;
+            }
+        }
+        return sum;
+
 }
 }
