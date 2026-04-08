@@ -23,11 +23,13 @@ public class Array2 {
         System.out.println(ex.no14(arr));*/
 
         // task 6
-        int [] a = {4, 1, 13,10, 6};
+       /* int [] a = {4, 1, 13,10, 6};
         int [] b = {2, 1, 13,4, 5};
-        System.out.println(ex.matchUp(a,b));
+        System.out.println(ex.matchUp(a,b));*/
 
-
+        // task 7
+        int [] a = {4, 2, 3,1, 10};
+        System.out.println(ex.modThree(a));
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -98,4 +100,18 @@ public int matchUp(int [] nums1 , int [] nums2){
         }
         return count;
 }
+
+public boolean modThree(int [] arr) {
+    if (arr.length >= 3) {
+        for (int i = 0; i < arr.length; i++) {
+            if ((arr[i] % 2 == 0 && arr[i + 1] % 2 == 0 && arr[i + 2] % 2 == 0) || (arr[i] % 2 != 0 && arr[i + 1] % 2 != 0 && arr[i + 2] % 2 != 0)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    return false;
+}
+
 }
