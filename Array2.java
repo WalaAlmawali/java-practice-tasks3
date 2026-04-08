@@ -40,8 +40,12 @@ public class Array2 {
         System.out.println(java.util.Arrays.toString(ex.shiftLeft(a)));*/
 
         // task 10
-        int [] a = {1,2,4,6,7,8};
-        System.out.println(java.util.Arrays.toString(ex.post4(a)));
+       /* int [] a = {1,2,4,6,7,8};
+        System.out.println(java.util.Arrays.toString(ex.post4(a)));*/
+
+        // task 11
+        int [] a = {1,2,10,6,10,8};
+        System.out.println(java.util.Arrays.toString(ex.withoutTen(a)));
 
     }
     public int  countEvens(int [] arr){
@@ -159,5 +163,15 @@ public int [] post4(int [] arr){
         }
         return result;
 }
-
+public int [] withoutTen(int [] arr){
+        int [] result= new int[arr.length];
+        int index = 0;
+        for(int i = 0 ; i<arr.length;i++){
+            if(arr[i] != 10){
+                result[index] = arr[i];
+                index++;
+            }
+        }
+        return result;
+}
 }
