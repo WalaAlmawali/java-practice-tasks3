@@ -28,8 +28,13 @@ public class Array2 {
         System.out.println(ex.matchUp(a,b));*/
 
         // task 7
-        int [] a = {4, 2, 3,1, 10};
-        System.out.println(ex.modThree(a));
+        /*int [] a = {4, 2, 3,1, 10};
+        System.out.println(ex.modThree(a));*/
+
+        // task 8
+        int [] c = {4, 2, 3,4, 2};
+        System.out.println(ex.sameEnds(2,c));
+
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -112,6 +117,15 @@ public boolean modThree(int [] arr) {
         }
     }
     return false;
+}
+
+public boolean sameEnds(int n , int [] arr){
+        for(int i = 0; i <n;i++){
+            if(arr[i] != arr[arr.length - n + i]){
+                return false;
+            }
+        }
+        return true;
 }
 
 }
