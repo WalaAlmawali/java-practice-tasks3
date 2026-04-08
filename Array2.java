@@ -36,9 +36,12 @@ public class Array2 {
         System.out.println(ex.sameEnds(2,c));*/
 
         // task 9
-        int [] a = {1,2,3,4};
-        System.out.println(java.util.Arrays.toString(ex.shiftLeft(a)));
+       /* int [] a = {1,2,3,4};
+        System.out.println(java.util.Arrays.toString(ex.shiftLeft(a)));*/
 
+        // task 10
+        int [] a = {1,2,4,6,7,8};
+        System.out.println(java.util.Arrays.toString(ex.post4(a)));
 
     }
     public int  countEvens(int [] arr){
@@ -140,6 +143,21 @@ public int [] shiftLeft(int [] arr){
         }
         arr[arr.length-1]=temp;
         return arr;
+}
+
+public int [] post4(int [] arr){
+        int last4 = 0;
+        for(int i =0 ; i< arr.length; i++){
+            if(arr[i]==4){
+                last4=i;
+            }
+        }
+
+        int [] result = new int[arr.length - last4 -1];
+        for (int i = 0; i<result.length;i++){
+            result[i]= arr[last4 + 1 + i];
+        }
+        return result;
 }
 
 }
