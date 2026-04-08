@@ -48,8 +48,11 @@ public class Array2 {
         System.out.println(java.util.Arrays.toString(ex.withoutTen(a)));*/
 
         // task 12
-        System.out.println(java.util.Arrays.toString(ex.fizzBuzz(2,5)));
+        //System.out.println(java.util.Arrays.toString(ex.fizzBuzz(2,5)));
 
+        // task 13
+        int [] a = {1,2,10,6};
+        System.out.println(ex.bigDiff(a));
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -194,5 +197,20 @@ public String [] fizzBuzz(int start , int end){
             }
         }
         return result;
+}
+public int bigDiff(int [] arr){
+        int max = arr[0];
+        int min = arr[0];
+
+        for(int i =0 ; i<arr.length;i++){
+            if(arr[i]> max){
+                max = arr[i];
+            }
+            if(arr[i]< min){
+                min = arr[i];
+            }
+
+        }
+        return max - min;
 }
 }
