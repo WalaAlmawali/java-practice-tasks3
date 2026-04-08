@@ -8,9 +8,12 @@ public class Array2 {
        System.out.println(ex.countEvens(arr));*/
 
         // task 2
-        int [] arr = {2, 1, 13, 3, 4};
-        System.out.println(ex.sum13(arr));
+        /*int [] arr = {2, 1, 13, 3, 4};
+        System.out.println(ex.sum13(arr));*/
 
+        // task 3
+        int [] arr = {2, 4, 13,5, 4};
+        System.out.println(ex.lucky13(arr));
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -33,6 +36,15 @@ public class Array2 {
             }
         }
         return total;
+    }
+
+    public boolean lucky13(int [] arr ){
+        for(int i =0; i<arr.length;i++){
+            if(arr[i]== 1 || arr[i]== 3){
+                return false;
+            }
+        }
+        return true;
     }
 
 }
