@@ -19,8 +19,13 @@ public class Array2 {
         //  System.out.println(java.util.Arrays.toString(ex.fizzArray(6)));
 
         // task 5
-        int [] arr = {2, 1, 13,4, 6};
-        System.out.println(ex.no14(arr));
+       /* int [] arr = {2, 1, 13,4, 6};
+        System.out.println(ex.no14(arr));*/
+
+        // task 6
+        int [] a = {4, 1, 13,10, 6};
+        int [] b = {2, 1, 13,4, 5};
+        System.out.println(ex.matchUp(a,b));
 
 
     }
@@ -82,5 +87,15 @@ public class Array2 {
         }
         return true;
     }
-
+public int matchUp(int [] nums1 , int [] nums2){
+    int count = 0;
+        if(nums1.length == nums2.length){
+            for(int i = 0; i< nums1.length;i++){
+                if(nums1[i] != nums2[i] && Math.abs(nums1[i] - nums2[i]) <= 2){
+                    count++;
+                }
+            }
+        }
+        return count;
+}
 }
