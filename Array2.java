@@ -16,7 +16,12 @@ public class Array2 {
         System.out.println(ex.lucky13(arr));*/
 
         // task 4
-        System.out.println(java.util.Arrays.toString(ex.fizzArray(6)));
+        //  System.out.println(java.util.Arrays.toString(ex.fizzArray(6)));
+
+        // task 5
+        int [] arr = {2, 1, 13,4, 6};
+        System.out.println(ex.no14(arr));
+
 
     }
     public int  countEvens(int [] arr){
@@ -57,6 +62,25 @@ public class Array2 {
             array[i]=i;
         }
         return array;
+    }
+
+    public boolean no14(int [] arr){
+        boolean has1 = false;
+        boolean has4 = false;
+
+        for (int i =0 ; i< arr.length;i++){
+            if(arr[i] == 1){
+                has1 = true;
+            }
+            if(arr[i] == 4){
+                has4 = true;
+            }
+
+        }
+        if(has4 == true && has1 == true){
+            return false;
+        }
+        return true;
     }
 
 }
