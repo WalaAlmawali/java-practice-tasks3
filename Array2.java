@@ -55,8 +55,12 @@ public class Array2 {
         System.out.println(ex.bigDiff(a));*/
 
         // task 14
-        int [] a = {1,5,10,7,3};
-        System.out.println(ex.sum67(a));
+        /*int [] a = {1,5,10,7,3};
+        System.out.println(ex.sum67(a));*/
+
+        // task 15
+        int [] a = {2,5,2,2,2};
+        System.out.println(ex.sum28(a));
 
     }
     public int  countEvens(int [] arr){
@@ -237,5 +241,18 @@ public int sum67(int [] arr){
         }
         return sum;
 
+}
+public boolean sum28(int [] arr){
+        int sum = 0;
+
+        for(int i =0; i<arr.length; i++){
+            if(arr[i]==2){
+                sum += arr[i];
+            }
+        }
+        if(sum==8){
+            return true;
+        }
+        return false;
 }
 }
