@@ -12,8 +12,12 @@ public class Array2 {
         System.out.println(ex.sum13(arr));*/
 
         // task 3
-        int [] arr = {2, 4, 13,5, 4};
-        System.out.println(ex.lucky13(arr));
+        /*int [] arr = {2, 4, 13,5, 4};
+        System.out.println(ex.lucky13(arr));*/
+
+        // task 4
+        System.out.println(java.util.Arrays.toString(ex.fizzArray(6)));
+
     }
     public int  countEvens(int [] arr){
         int count = 0;
@@ -45,6 +49,14 @@ public class Array2 {
             }
         }
         return true;
+    }
+
+    public int [] fizzArray(int n ){
+        int [] array = new int[n];
+        for(int i =0; i<array.length;i++){
+            array[i]=i;
+        }
+        return array;
     }
 
 }
